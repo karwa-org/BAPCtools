@@ -23,7 +23,7 @@
 % it is decorated with the text "This is not a blank page".
 %-------------------------------------------------------------------------------
 
-\newcommand{\defaultblankpagetext}{This page is intentionally left blank.}
+\newcommand{\defaultblankpagetext}{Cette page est intentionellement laissée vièrge.}
 
 \newcommand{\ThisIsNotABlankPage}{
 	\cleartooddpage[
@@ -72,11 +72,11 @@
 
 \newcommand{\todo}[1]{{\color{red}[#1]}}
 
-\newcommand{\timelimit}{TIMELIMIT MISSING}
+\newcommand{\timelimit}{LIMITE DE TEMPS MANQUANTE}
 \newcommand{\problemlabel}{} % Empty to hide activity chart
-\newcommand{\problemyamlname}{Problem name}
-\newcommand{\problemauthor}{Problem author}
-\newcommand{\fullproblemtitle}{\problemlabel: \problemyamlname}
+\newcommand{\problemyamlname}{Nom du problème}
+\newcommand{\problemauthor}{Auteur du problème}
+\newcommand{\fullproblemtitle}{\problemlabel : \problemyamlname}
 
 %-------------------------------------------------------------------------------
 % Sectioning commands and list of problems.
@@ -85,7 +85,7 @@
 % turned out to be a lot easier in terms of custom formatting.
 %-------------------------------------------------------------------------------
 \renewcommand{\thesection}{\problemlabel}
-\newcommand{\listofproblemsname}{Problems}
+\newcommand{\listofproblemsname}{Problèmes}
 \newlistof{listofproblems}{lop}{\listofproblemsname}
 \newlistentry{problem}{lop}{0}
 \newcounter{SampleCount}
@@ -113,7 +113,7 @@
 	}
 	\vspace{-2.3em}
 	\hfill
-	\ifdefempty{\timelimit}{}{{\color{darkgray}\fontfamily{qcr}Time limit: \timelimit{}s}}
+	\ifdefempty{\timelimit}{}{{\color{darkgray}\fontfamily{qcr}Limite de temps : \timelimit{}s}}
 
 	\setcounter{SampleCount}{0}
 	\setcounter{figure}{0}
@@ -142,7 +142,7 @@
 %-------------------------------------------------------------------------------
 \copypagestyle{bapc}{headings}
 \makepsmarks{bapc}{
-	\createmark{section}{both}{shownumber}{Problem }{: }
+	\createmark{section}{both}{shownumber}{Problème }{ : }
 }
 \pagestyle{bapc}
 \nouppercaseheads
@@ -152,16 +152,16 @@
 % Environments for specifying Input, Output and optionally Explanation.
 %-------------------------------------------------------------------------------
 \newenvironment{Input}{
-	\subsection*{Input}
+	\subsection*{Entrée}
 }{}
 \newenvironment{Output}{
-	\subsection*{Output}
+	\subsection*{Sortie}
 }{}
 \newenvironment{Interaction}{
-	\subsection*{Interaction}
+	\subsection*{Intéraction}
 }{}
 \newenvironment{Explanation}{
-	\subsection*{Explanation of samples}
+	\subsection*{Explication des exemples}
 }{}
 
 %-------------------------------------------------------------------------------
@@ -185,7 +185,7 @@
 % A solution to this problem was found on http://tex.stackexchange.com/a/111488 .
 %-------------------------------------------------------------------------------
 \newcommand{\mySampleHeading}[1]{
-	\multicolumn{1}{l}{\large \bfseries\textrm{Sample #1 \arabic{SampleCount}}}
+	\multicolumn{1}{l}{\large \bfseries\textrm{Exemple #1 \arabic{SampleCount}}}
 }
 \newcommand{\SampleListing}[1]{
   	\lstinputlisting[aboveskip=-0.7\baselineskip,belowskip=-0.9\baselineskip,inputencoding=utf8/latin1,basicstyle=\ttfamily]{#1}
@@ -200,7 +200,7 @@
 	\renewcommand\baselinestretch{1}\selectfont% <-- combining various lengths in order
 	\setlength{\extrarowheight}{2.5pt}%              to set the top and bottom padding; see
 	\begin{tabularx}{\textwidth}{|X|X|}%             http://tex.stackexchange.com/a/31704
-		\mySampleHeading{Input} & \mySampleHeading{Output} \\
+		\mySampleHeading{d'entrée} & \mySampleHeading{de sortie} \\
 		\hline
 	  	\SampleListing{#1}
 		&
@@ -218,7 +218,7 @@
 	\renewcommand\baselinestretch{1}\selectfont% <-- combining various lengths in order
 	\setlength{\extrarowheight}{2.5pt}%              to set the top and bottom padding; see
 	\begin{tabularx}{\textwidth}{|X|}%             http://tex.stackexchange.com/a/31704
-		\mySampleHeading{Input} \\
+		\mySampleHeading{Entrée} \\
 		\hline
 	  	\SampleListing{#1} \\
 		\hline
@@ -227,7 +227,7 @@
     \par
     \noindent
 	\begin{tabularx}{\textwidth}{|X|}%             http://tex.stackexchange.com/a/31704
-	  	\mySampleHeading{Output} \\
+      \mySampleHeading{Sortie} \\
 		\hline
 	  	\SampleListing{#2} \\
 		\hline
@@ -267,11 +267,11 @@
 	\normalsize%
 	\stepcounter{SampleCount}%
 	\begin{tabularx}{0.983\textwidth}{XXX}%
-		\large\bfseries\textrm{Read} \hfill%
+		\large\bfseries\textrm{Lire} \hfill%
 		& %
-		\centering \large\bfseries\textrm{Sample Interaction \arabic{SampleCount}}%
+		\centering \large\bfseries\textrm{Intéraction d'exemple \arabic{SampleCount}}%
 		& %
-		\hfill \large\bfseries\textrm{Write}\\%
+		\hfill \large\bfseries\textrm{Écrire}\\%
 	\end{tabularx}
 	\nopagebreak
 	\vspace{-1.0em}
