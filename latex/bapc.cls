@@ -67,6 +67,7 @@
 \RequirePackage{float}
 \RequirePackage{listingsutf8}
 \RequirePackage{tocloft}
+\RequirePackage{tikz}
 
 \RequirePackage[hidelinks,bookmarks=true,pdfusetitle]{hyperref}
 
