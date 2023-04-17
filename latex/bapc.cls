@@ -114,7 +114,7 @@
 	}
 	\vspace{-2.3em}
 	\hfill
-	\ifdefempty{\timelimit}{}{{\color{darkgray}\fontfamily{qcr}Limite de temps : \timelimit{}s}}
+	\ifdefempty{\timelimit}{}{{\color{darkgray}\textbf{Limite de temps :} \timelimit{}s}}
 
 	\setcounter{SampleCount}{0}
 	\setcounter{figure}{0}
