@@ -23,7 +23,7 @@
 % it is decorated with the text "This is not a blank page".
 %-------------------------------------------------------------------------------
 
-\newcommand{\defaultblankpagetext}{Cette page est intentionellement laissée vièrge.}
+\newcommand{\defaultblankpagetext}{Cette page est intentionnellement laissée vierge.}
 
 \newcommand{\ThisIsNotABlankPage}{
 	\cleartooddpage[
@@ -159,7 +159,7 @@
 	\subsection*{Sortie}
 }{}
 \newenvironment{Interaction}{
-	\subsection*{Intéraction}
+	\subsection*{Interaction}
 }{}
 \newenvironment{Explanation}{
 	\subsection*{Explication des exemples}
@@ -270,7 +270,7 @@
 	\begin{tabularx}{0.983\textwidth}{XXX}%
 		\large\bfseries\textrm{Lire} \hfill%
 		& %
-		\centering \large\bfseries\textrm{Intéraction d'exemple \arabic{SampleCount}}%
+		\centering \large\bfseries\textrm{Interaction d'exemple \arabic{SampleCount}}%
 		& %
 		\hfill \large\bfseries\textrm{Écrire}\\%
 	\end{tabularx}
